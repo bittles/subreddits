@@ -47,7 +47,7 @@ def fetch_subreddits(size_filter: str, sort_by: str) -> list[str]:
      #       continue
             name = sub.get("displayName", "")
             if name:
-                print(f"getting {name}")
+         #       print(f"getting {name}")
           #      if nsfw:
                 names.append(name)
     return names
