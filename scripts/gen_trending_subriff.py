@@ -39,11 +39,11 @@ def fetch_subreddits(size_filter: str, sort_by: str) -> list[str]:
         # Skip if any NSFW flag is true
         nsfw = ""
         if (
-            sub.get("isNsfw"),
-            or sub.get("internal_IsNsfw"),
+            sub.get("isNsfw")
+            or sub.get("internal_IsNsfw")
             or sub.get("suggested_Internal_IsNsfw")
-            nsfw = "true"
         ):
+            nsfw = "true"
             continue
         name = sub.get("displayName", "")
         if name:
