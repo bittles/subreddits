@@ -37,17 +37,17 @@ def fetch_subreddits(size_filter: str, sort_by: str) -> list[str]:
     names = []
     for sub in data.get("subreddits", []):
         # Skip if any NSFW flag is true
-        nsfw = ""
+      #  nsfw = ""
         if (
             sub.get("isNsfw")
             or sub.get("internal_IsNsfw")
             or sub.get("suggested_Internal_IsNsfw")
         ):
-            nsfw = "true"
+       #     nsfw = "true"
             continue
-        name = sub.get("displayName", "")
-        if name:
-            if nsfw:
+            name = sub.get("displayName", "")
+            if name:
+      #      if nsfw:
                 names.append(name)
     return names
 
